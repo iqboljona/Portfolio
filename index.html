@@ -5,51 +5,69 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Iqboljon Abdulazizov</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 
 <style>
-body {font-family:Poppins;background:#f4f7f5;margin:0;color:#222}
-.container{max-width:1100px;margin:auto;padding:20px}
-header{background:#1a472a;color:#fff;text-align:center;padding:80px 20px}
-h1{font-size:42px;margin-bottom:10px}
-.tagline{font-size:26px;font-weight:700}
-.sub{opacity:.8;margin-top:10px}
-.trust{margin-top:15px;font-size:14px;opacity:.9}
+body{font-family:Poppins;margin:0;background:#f4f7f5;color:#222}
+.container{max-width:1200px;margin:auto;padding:20px}
 
-section{padding:60px 20px}
+header{background:linear-gradient(135deg,#1a472a,#2d6a4f);color:#fff;text-align:center;padding:100px 20px}
+h1{font-size:50px;margin-bottom:10px}
+.subtitle{opacity:.9}
+
+.tagline{background:rgba(255,255,255,0.1);padding:25px;border-radius:12px;margin-top:20px}
+.tagline-main{font-size:28px;font-weight:700}
+.tagline-sub{opacity:.8}
+
+.trust{margin-top:15px;font-size:14px}
+
+.cta-btn{display:inline-block;margin-top:20px;background:#fff;color:#1a472a;padding:12px 24px;border-radius:25px;text-decoration:none;font-weight:600}
+
+nav{background:#fff;position:sticky;top:0;padding:10px;box-shadow:0 2px 10px rgba(0,0,0,0.1)}
+nav ul{display:flex;justify-content:center;gap:10px;list-style:none;padding:0}
+nav a{text-decoration:none;color:#1a472a;font-weight:600;font-size:13px}
+
+section{padding:70px 20px}
 h2{text-align:center;margin-bottom:40px}
 
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
 
 .card{background:#fff;padding:20px;border-radius:10px;box-shadow:0 5px 15px rgba(0,0,0,0.05)}
 
-.cta{background:#1a472a;color:#fff;text-align:center;padding:60px 20px}
-.cta a{background:#fff;color:#1a472a;padding:12px 25px;border-radius:25px;text-decoration:none;font-weight:600}
+footer{background:#1a472a;color:#fff;text-align:center;padding:40px}
 </style>
 </head>
 
 <body>
 
 <header>
-<h1>Iqboljon Abdulazizov</h1>
-<div>Moliyaviy Maslahatchi | Biznes Trener | ERP Mutaxassisi</div>
+<h1>IQBOLJON ABDULAZIZOV</h1>
+<div class="subtitle">Moliyaviy Maslahatchi | Biznes Trener | ERP Mutaxassisi</div>
 
 <div class="tagline">
-Pul qayerga yo‘qolayotganini topib
+<div class="tagline-main">Pul qayerga yo‘qolayotganini topib</div>
+<div class="tagline-sub">aniq yechim beraman</div>
 </div>
-<div class="sub">aniq yechim beraman</div>
 
 <div class="trust">
 ✔ 10+ loyihalar | ✔ 6+ yil tajriba | ✔ 30%+ natijalar
 </div>
 
-<br>
-<a href="#contact" style="background:#fff;color:#1a472a;padding:12px 24px;border-radius:25px;text-decoration:none;font-weight:600;">
-Bepul diagnostika olish
-</a>
+<a href="#contact" class="cta-btn">Bepul diagnostika olish</a>
 </header>
 
-<section>
+<nav>
+<ul>
+<li><a href="#about">Haqimda</a></li>
+<li><a href="#experience">Tajriba</a></li>
+<li><a href="#projects">Loyihalar</a></li>
+<li><a href="#cases">Natijalar</a></li>
+<li><a href="#services">Xizmatlar</a></li>
+<li><a href="#contact">Kontakt</a></li>
+</ul>
+</nav>
+
+<section id="about">
 <div class="container">
 <h2>Mening Haqimda</h2>
 
@@ -60,44 +78,34 @@ Bepul diagnostika olish
 </div>
 </section>
 
-<section>
+<section id="experience">
 <div class="container">
-<h2>Xizmatlar</h2>
-
-<div class="grid">
+<h2>Ish Tajribasi</h2>
 
 <div class="card">
-<h3>Moliyaviy Konsultatsiya</h3>
-<ul>
-<li>Pul qayerda yo‘qolayotganini aniqlash</li>
-<li>Cash flow nazorati</li>
-<li>Foyda 20–40% oshirish</li>
-</ul>
+<h4>Dataprizma LLC</h4>
+<p>Loyiha menejeri va biznes maslahatchi</p>
+<p>Foyda 35% oshirildi</p>
 </div>
 
-<div class="card">
-<h3>ERP Joriy Qilish</h3>
-<ul>
-<li>Biznes analiz</li>
-<li>Tizim joriy qilish</li>
-<li>Avtomatlashtirish</li>
-</ul>
-</div>
-
-<div class="card">
-<h3>Biznes Trening</h3>
-<ul>
-<li>10 modul kurs</li>
-<li>Moliyaviy boshqaruv</li>
-<li>Amaliy кейслар</li>
-</ul>
-</div>
-
-</div>
 </div>
 </section>
 
-<section>
+<section id="projects">
+<div class="container">
+<h2>Asosiy Loyihalar</h2>
+
+<div class="grid">
+<div class="card">Samo Tekstil</div>
+<div class="card">Ellada Tekstil</div>
+<div class="card">A-bozor</div>
+<div class="card">Uz-Kor-Gas</div>
+</div>
+
+</div>
+</section>
+
+<section id="cases">
 <div class="container">
 <h2>Real Natijalar</h2>
 
@@ -105,31 +113,57 @@ Bepul diagnostika olish
 
 <div class="card">
 <h4>Savdo kompaniyasi</h4>
-<p><strong>Muammo:</strong> Pul yetishmasligi</p>
-<p><strong>Natija:</strong> Qarzdorlik -30%</p>
+<p>Qarzdorlik 30% kamaydi</p>
 </div>
 
 <div class="card">
 <h4>Ishlab chiqarish</h4>
-<p><strong>Muammo:</strong> Xarajatlar yuqori</p>
-<p><strong>Natija:</strong> Xarajatlar -20%</p>
+<p>Xarajatlar 20% kamaydi</p>
 </div>
 
 <div class="card">
 <h4>ERP loyiha</h4>
-<p><strong>Muammo:</strong> Tizim yo‘q</p>
-<p><strong>Natija:</strong> 3x tez hisobot</p>
+<p>Hisobotlar 3x tezlashdi</p>
 </div>
 
 </div>
+
 </div>
 </section>
 
-<section class="cta">
-<h2>Biznesingizda pul yetishmovchiligi bormi?</h2>
-<p>1 haftalik diagnostika orqali muammoni aniqlab beraman</p>
-<br>
-<a href="tel:+998907664428">Bog‘lanish</a>
+<section id="services">
+<div class="container">
+<h2>Xizmatlar</h2>
+
+<div class="grid">
+
+<div class="card">
+<h4>Moliyaviy Konsultatsiya</h4>
+<ul>
+<li>Pul qayerda yo‘qolayotganini aniqlash</li>
+<li>Cash flow nazorati</li>
+<li>Foyda oshirish</li>
+</ul>
+</div>
+
+<div class="card">
+<h4>ERP</h4>
+<ul>
+<li>Tizim joriy qilish</li>
+<li>Avtomatlashtirish</li>
+</ul>
+</div>
+
+<div class="card">
+<h4>Trening</h4>
+<ul>
+<li>10 modul kurs</li>
+<li>Amaliy o‘qitish</li>
+</ul>
+</div>
+
+</div>
+</div>
 </section>
 
 <section id="contact">
@@ -141,6 +175,11 @@ Bepul diagnostika olish
 
 </div>
 </section>
+
+<footer>
+<p><strong>Biznesingizda pul yetishmovchiligi bormi?</strong></p>
+<p>1 haftalik diagnostika orqali muammoni aniqlab beraman</p>
+</footer>
 
 </body>
 </html>
