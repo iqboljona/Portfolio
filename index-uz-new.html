@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Iqboljon Abdulazizov - Moliyaviy Maslahatchi, Biznes Trener, ERP Mutaxassisi">
+    <title>Iqboljon Abdulazizov - Professional Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #1a472a;
+            --secondary: #2d6a4f;
+            --accent: #40916c;
+            --light: #d8f3dc;
+            --bg-light: #f1f7f4;
+            --bg-dark: #0f2818;
+            --text-dark: #1a1a1a;
+            --text-light: #ffffff;
+            --border-color: #e5f0eb;
+            --shadow-sm: 0 2px 8px rgba(26, 71, 42, 0.08);
+            --shadow-md: 0 8px 24px rgba(26, 71, 42, 0.12);
+            --shadow-lg: 0 16px 48px rgba(26, 71, 42, 0.15);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-dark);
+            background: var(--bg-light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* LANG SWITCHER */
+        .lang-switcher {
+            position: fixed;
+            top: 24px;
+            right: 24px;
+            display: flex;
+            gap: 8px;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 8px 12px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .lang-btn {
+            padding: 8px 16px;
+            border: none;
+            background: transparent;
+            color: var(--primary);
+            border-radius: 16px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .lang-btn:hover {
+            background: var(--accent);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .lang-btn.active {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* HEADER */
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: var(--text-light);
+            padding: 120px 24px 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            transform: translate(150px, -150px);
+        }
+
+        header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 70%);
+            border-radius: 50%;
+            transform: translate(-100px, 100px);
+        }
+
+        header .content {
+            position: relative;
+            z-index: 1;
+            animation: slideInDown 0.8s ease;
+        }
+
+        @keyframes slideInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 56px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            letter-spacing: -1px;
+            animation: slideInDown 0.8s ease 0.1s both;
+        }
+
+        header .subtitle {
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 24px;
+            opacity: 0.95;
+            animation: slideInDown 0.8s ease 0.2s both;
+        }
+
+        header .tagline-block {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 32px;
+            border-radius: 16px;
+            margin: 32px 0;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            animation: slideInDown 0.8s ease 0.3s both;
+        }
+
+        header .tagline-main {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+
+        header .tagline-sub {
+            font-size: 16px;
+            opacity: 0.85;
+            font-style: italic;
+        }
+
+        header .contact-header {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            flex-wrap: wrap;
+            font-size: 14px;
+            margin-top: 32px;
+            animation: slideInDown 0.8s ease 0.4s both;
+        }
+
+        header .contact-header a {
+            color: var(--light);
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        header .contact-header a:hover {
+            background: var(--light);
+            color: var(--primary);
+            transform: translateY(-4px);
+        }
+
+        /* NAV */
+        nav {
+            background: var(--text-light);
+            padding: 16px 0;
+            position: sticky;
+            top: 0;
+            box-shadow: var(--shadow-md);
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 13px;
+            padding: 8px 16px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 16px;
+            right: 16px;
+            height: 3px;
+            background: var(--accent);
+            border-radius: 2px;
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        nav a:hover {
+            background: var(--bg-light);
+            color: var(--accent);
+        }
+
+        nav a:hover::after {
+            transform: scaleX(1);
+        }
+
+        /* SECTIONS */
+        section {
+            padding: 80px 24px;
+            background: var(--text-light);
+        }
+
+        section:nth-child(odd) {
+            background: var(--bg-light);
+        }
+
+        section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 48px;
+            color: var(--primary);
+            text-align: center;
+            position: relative;
+            padding-bottom: 20px;
+        }
+
+        section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: var(--accent);
+            border-radius: 2px;
+        }
+
+        section h3 {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--secondary);
+            margin: 32px 0 16px 0;
+        }
+
+        /* ABOUT */
+        .about-content {
+            max-width: 900px;
+            margin: 0 auto;
+            line-height: 1.9;
+        }
+
+        .about-content p {
+            margin-bottom: 24px;
+            font-size: 16px;
+            color: #555;
+        }
+
+        .about-content strong {
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 24px;
+            margin-top: 48px;
+        }
+
+        .summary-item {
+            background: var(--text-light);
+            padding: 28px;
+            border-radius: 12px;
+            border-left: 4px solid var(--accent);
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .summary-item:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+            border-left-color: var(--primary);
+        }
+
+        .summary-item strong {
+            display: block;
+            margin-bottom: 12px;
+            font-size: 16px;
+            color: var(--primary);
+        }
+
+        .summary-item p {
+            font-size: 14px;
+            color: #777;
+            margin: 0;
+        }
+
+        /* EXPERIENCE */
+        .experience-item {
+            background: var(--text-light);
+            padding: 32px;
+            margin-bottom: 28px;
+            border-radius: 12px;
+            border-left: 5px solid var(--accent);
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s ease;
+        }
+
+        .experience-item:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateX(8px);
+        }
+
+        .experience-item h4 {
+            color: var(--primary);
+            font-size: 18px;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+
+        .experience-item .position {
+            color: var(--accent);
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .experience-item ul {
+            list-style: none;
+        }
+
+        .experience-item li {
+            padding: 10px 0;
+            padding-left: 28px;
+            position: relative;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .experience-item li::before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        /* EDUCATION */
+        .education-item {
+            background: var(--text-light);
+            padding: 24px;
+            margin-bottom: 16px;
+            border-radius: 12px;
+            border-top: 3px solid var(--accent);
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s ease;
+        }
+
+        .education-item:hover {
+            box-shadow: var(--shadow-md);
+        }
+
+        .education-item h4 {
+            color: var(--primary);
+            font-weight: 700;
+            margin-bottom: 6px;
+            font-size: 16px;
+        }
+
+        .education-item p {
+            color: #777;
+            font-size: 14px;
+            margin: 0;
+        }
+
+        /* SKILLS */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 28px;
+            margin-top: 40px;
+        }
+
+        .skill-card {
+            background: var(--text-light);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: var(--shadow-sm);
+            border-top: 4px solid var(--accent);
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .skill-card:hover {
+            transform: translateY(-12px);
+            box-shadow: var(--shadow-lg);
+            border-top-color: var(--primary);
+        }
+
+        .skill-card h4 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .skill-card ul {
+            list-style: none;
+        }
+
+        .skill-card li {
+            padding: 10px 0;
+            padding-left: 24px;
+            position: relative;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .skill-card li::before {
+            content: "◆";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-size: 8px;
+        }
+
+        /* PROJECTS */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+            margin-top: 40px;
+        }
+
+        .project-card {
+            background: var(--text-light);
+            padding: 28px;
+            border-radius: 12px;
+            box-shadow: var(--shadow-sm);
+            border-left: 4px solid var(--accent);
+            transition: all 0.3s ease;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent), var(--secondary));
+            transform: translateX(-100%);
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .project-card:hover::before {
+            transform: translateX(0);
+        }
+
+        .project-card h4 {
+            color: var(--primary);
+            margin-bottom: 12px;
+            font-size: 17px;
+            font-weight: 700;
+        }
+
+        .project-card p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        /* SERVICES */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 24px;
+            margin-top: 40px;
+        }
+
+        .service-box {
+            background: var(--text-light);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: var(--shadow-sm);
+            border-top: 4px solid var(--accent);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .service-box:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+            border-top-color: var(--primary);
+        }
+
+        .service-box h4 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            font-size: 17px;
+            font-weight: 700;
+        }
+
+        .service-box ul {
+            list-style: none;
+            text-align: left;
+        }
+
+        .service-box li {
+            padding: 8px 0;
+            padding-left: 20px;
+            position: relative;
+            font-size: 13px;
+            color: #666;
+        }
+
+        .service-box li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        /* CONTACT SECTION */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-top: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .contact-item {
+            background: var(--text-light);
+            padding: 28px;
+            border-radius: 12px;
+            border-top: 3px solid var(--accent);
+            box-shadow: var(--shadow-sm);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .contact-item:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .contact-item h4 {
+            color: var(--primary);
+            margin-bottom: 12px;
+            font-weight: 700;
+            font-size: 16px;
+        }
+
+        .contact-item a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .contact-item a:hover {
+            color: var(--primary);
+        }
+
+        /* FOOTER */
+        footer {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: var(--text-light);
+            padding: 48px 24px;
+            text-align: center;
+        }
+
+        footer h3 {
+            color: var(--light);
+            margin-bottom: 24px;
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+        }
+
+        footer .contact-footer {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 28px;
+            font-size: 14px;
+        }
+
+        footer a {
+            color: var(--light);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            padding: 8px 16px;
+            border-radius: 20px;
+        }
+
+        footer a:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        footer .copyright {
+            margin-top: 24px;
+            padding-top: 24px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            font-size: 13px;
+            opacity: 0.8;
+            color: var(--light);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            header {
+                padding: 80px 20px 60px;
+            }
+
+            header h1 {
+                font-size: 38px;
+            }
+
+            header .subtitle {
+                font-size: 16px;
+            }
+
+            header .tagline-main {
+                font-size: 22px;
+            }
+
+            section {
+                padding: 60px 20px;
+            }
+
+            section h2 {
+                font-size: 32px;
+            }
+
+            nav ul {
+                gap: 4px;
+            }
+
+            nav a {
+                font-size: 12px;
+                padding: 6px 12px;
+            }
+
+            .summary-grid,
+            .skills-grid,
+            .projects-grid,
+            .services-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .lang-switcher {
+                top: 12px;
+                right: 12px;
+            }
+
+            footer h3 {
+                font-size: 24px;
+            }
+        }
+
+        /* SCROLL ANIMATION */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="lang-switcher">
+        <a href="index-uz.html" class="lang-btn active">🇺🇿 O'z</a>
+        <a href="index-ru.html" class="lang-btn">🇷🇺 Рус</a>
+        <a href="index-en.html" class="lang-btn">🇬🇧 Eng</a>
+    </div>
+
+    <header>
+        <div class="content">
+            <h1>IQBOLJON ABDULAZIZOV</h1>
+            <div class="subtitle">Moliyaviy Maslahatchi | Biznes Trener | ERP Mutaxassisi</div>
+            
+            <div class="tagline-block">
+                <div class="tagline-main">Pul qayerga yo'qolayotganini topib</div>
+                <div class="tagline-sub">aniq yechim beraman</div>
+            </div>
+
+            <div class="contact-header">
+                <a href="tel:+99890766442">📞 +998 90 766 44 28</a>
+                <a href="mailto:Iqboljona.22@gmail.com">✉️ Iqboljona.22@gmail.com</a>
+                <a href="https://www.linkedin.com/in/iqboljon574425127/" target="_blank">🔗 LinkedIn</a>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">Mening Haqimda</a></li>
+            <li><a href="#experience">Ish Tajribasi</a></li>
+            <li><a href="#education">Ta'lim</a></li>
+            <li><a href="#skills">Malakalar</a></li>
+            <li><a href="#projects">Loyihalar</a></li>
+            <li><a href="#services">Xizmatlar</a></li>
+            <li><a href="#contact">Kontakt</a></li>
+        </ul>
+    </nav>
+
+    <section id="about">
+        <div class="container">
+            <h2>Mening Haqimda</h2>
+            <div class="about-content">
+                <p>Men moliyaviy boshqaruv va biznes tizimlashtirish yo'nalishida <strong>8+ yillik tajribaga</strong> ega mutaxassisman. 10 dan ortiq katta loyihalarda loyiha rahbari va biznes analitik sifatida ishlaganman.</p>
+                <p><strong>Asosiy maqsadim:</strong> bizneslarda moliyaviy tartib o'rnatish, pul oqimini nazoratga olish va foydani oshirish.</p>
+                <p><strong>Men nazariya emas, amaliy natija beraman.</strong></p>
+
+                <div class="summary-grid">
+                    <div class="summary-item">
+                        <strong>8+ Yil Tajriba</strong>
+                        <p>Moliyaviy boshqaruv va ERP tizimlashtirish</p>
+                    </div>
+                    <div class="summary-item">
+                        <strong>10+ Loyihalar</strong>
+                        <p>Muvaffaqiyatli joriy qilingan IT loyihalar</p>
+                    </div>
+                    <div class="summary-item">
+                        <strong>5+ Yil</strong>
+                        <p>Biznes tahlil va strategiya ixtisoslashi</p>
+                    </div>
+                    <div class="summary-item">
+                        <strong>35% Foyda Oshishi</strong>
+                        <p>Xarajatlarni optimallashtirish orqali</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <div class="container">
+            <h2>Ish Tajribasi</h2>
+
+            <div class="experience-item">
+                <h4>Moliyaviy Menejeri & Biznes Maslahatchi</h4>
+                <p class="position">O'z Firmasi | 2020-2026 (6+ yil)</p>
+                <ul>
+                    <li>Firmaning moliyaviy boshqaruvi va strategik rejalashtirish</li>
+                    <li>Moliyaviy tahlil va hisobotlash tizimini joriy qilish</li>
+                    <li>Xarajatlarni optimallashtirish orqali foydani 35% oshirish</li>
+                    <li>Rahbariyat uchun moliyaviy maslahatlar berish</li>
+                    <li>Moliya hisobidan 1+ yil dars berish</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <h4>IT Kompaniya - Moliya va Biznes Tizimlari</h4>
+                <p class="position">Toshkent | 2020-2026 (6+ yil)</p>
+                <ul>
+                    <li>ERP, CRM, WMS tizimlarining moliyaviy modullarini joriy qilish</li>
+                    <li>Biznes jarayonlarini tahlil qilish va optimallashtirish</li>
+                    <li>Loyiha o'smasi va byujet boshqaruvi</li>
+                    <li>Klientlarga amaliy moliyaviy maslahatlar berish</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <h4>Buxgalteriya va Administratsiya Lavozumlari</h4>
+                <p class="position">Toshkent | 2016-2026 (10+ yil)</p>
+                <ul>
+                    <li>6+ yildan beri bir nechta tashkilotning buxgalteriyasini boshqarish</li>
+                    <li>1,5 yil Dubay, BAA da savdo va ombor boshqaruvida</li>
+                    <li>1,5 yil Dubay, BAA da xizmat ko'rsatish sohasida</li>
+                    <li>Xalqaro iqtisodiy munosabatlar (2016) tamomlagani</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="education">
+        <div class="container">
+            <h2>Ta'lim va Sertifikatlar</h2>
+
+            <h3>Ta'lim</h3>
+            <div class="education-item">
+                <h4>Magistr Darajasi - Xalqaro Iqtisodiy Munosabatlar</h4>
+                <p>Toshkent Islom Universiteti | 2016</p>
+            </div>
+
+            <h3>Sertifikatlar va Kurslar</h3>
+            <div class="education-item">
+                <h4>PMP (Loyihalarni Boshqarish Dasturi)</h4>
+                <p>UJC (O'zbek-Yapon Markazi)</p>
+            </div>
+            <div class="education-item">
+                <h4>Moliyaviy va Menejeriyal Buxgalteriya</h4>
+                <p>Tony Bell</p>
+            </div>
+            <div class="education-item">
+                <h4>Innovatsiya va Biznes Modellar Raqamli Davr'da</h4>
+                <p>Senteo</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">
+            <h2>Asosiy Malakalar</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h4>💰 Moliya va Biznes</h4>
+                    <ul>
+                        <li>Moliyaviy Rejalashtirish va Tahlil</li>
+                        <li>Byujet va Xarajat Boshqaruvi</li>
+                        <li>Foyda Optimallashtirish</li>
+                        <li>Audit va Muvofiqlashtirish</li>
+                        <li>Moliyaviy Hisobotlar</li>
+                        <li>Pul Oqimi Boshqaruvi</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h4>⚙️ ERP va IT Tizimlari</h4>
+                    <ul>
+                        <li>ERP Tizimi Joriy Qilish</li>
+                        <li>CRM Tizimlari</li>
+                        <li>WMS (Ombor Boshqaruvi)</li>
+                        <li>Ishlab Chiqarish Boshqaruvi</li>
+                        <li>Tizim Integratsiyasi</li>
+                        <li>Foydalanuvchi O'qitish</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h4>📊 Boshqaruv va Optimizatsiya</h4>
+                    <ul>
+                        <li>Jarayon Optimizatsiyasi</li>
+                        <li>Biznes Intellekti</li>
+                        <li>Strategik Rejalashtirish</li>
+                        <li>Risk Menejamenti</li>
+                        <li>Loyiha Menejamenti</li>
+                        <li>Ma'lumot Tahlili</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2>Asosiy Loyihalar</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h4>Samo Tekstil</h4>
+                    <p>ERP loyihasi - To'liq moliyaviy va ishlab chiqarish boshqaruv tizimi</p>
+                </div>
+                <div class="project-card">
+                    <h4>Ellada Tekstil</h4>
+                    <p>WMS + Ishlab chiqarish - Ombor va ishlab chiqarish optimizatsiyasi</p>
+                </div>
+                <div class="project-card">
+                    <h4>A-bozor</h4>
+                    <p>Avtomobillarni tamirlash xizmati - Savdo va xizmat tizimi</p>
+                </div>
+                <div class="project-card">
+                    <h4>Uz-Kor-Gas</h4>
+                    <p>CRM, WMS, CMMS loyihalari - To'liq IT ekosistema</p>
+                </div>
+                <div class="project-card">
+                    <h4>Maktabgacha Ta'limi</h4>
+                    <p>Sertifikatlash va Billing tizimi - Raqamli boshqaruv</p>
+                </div>
+                <div class="project-card">
+                    <h4>Granit Ishlab Chiqarish</h4>
+                    <p>WMS + Ishlab chiqarish - Ombor va ishlab chiqarish boshqaruvi</p>
+                </div>
+                <div class="project-card">
+                    <h4>Glass Prime</h4>
+                    <p>Oyna kesish sehi - CRM va Ishlab chiqarish boshqarish</p>
+                </div>
+                <div class="project-card">
+                    <h4>Bobur Akademiyasi</h4>
+                    <p>Kirish Nazorati, Billing, Moliya tizimlari</p>
+                </div>
+                <div class="project-card">
+                    <h4>Diplomat School</h4>
+                    <p>Maktab Boshqaruv Tizimi - To'liq IT Integratsiyasi</p>
+                </div>
+                <div class="project-card">
+                    <h4>Khilal Group</h4>
+                    <p>WMS + Ishlab chiqarish - Ombor boshqaruvini avtomatizatsiya</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container">
+            <h2>Taklif Qiladigan Xizmatlar</h2>
+            <div class="services-grid">
+                <div class="service-box">
+                    <h4>💼 Moliyaviy Maslahatlar</h4>
+                    <ul>
+                        <li>Moliyaviy tahlil va audit</li>
+                        <li>Byujet rejalashtirish</li>
+                        <li>Foyda optimallashtirish</li>
+                        <li>Pul oqimi tahlili</li>
+                        <li>KPI kuzatuvi</li>
+                    </ul>
+                </div>
+                <div class="service-box">
+                    <h4>🖥️ Biznes Tizimlari</h4>
+                    <ul>
+                        <li>ERP tizimi joriy qilish</li>
+                        <li>CRM o'rnatish</li>
+                        <li>WMS sozlash</li>
+                        <li>Ishlab chiqarish tizimlari</li>
+                        <li>Billing tizimlari</li>
+                    </ul>
+                </div>
+                <div class="service-box">
+                    <h4>🎓 O'qitish va Trening</h4>
+                    <ul>
+                        <li>Moliyaviy boshqaruv o'qitish</li>
+                        <li>Jarayon optimallashtirish</li>
+                        <li>Jamoa etakligi</li>
+                        <li>Loyiha menejamenti</li>
+                        <li>Raqamli transformatsiya</li>
+                    </ul>
+                </div>
+                <div class="service-box">
+                    <h4>🚀 Optimizatsiya</h4>
+                    <ul>
+                        <li>Jarayon tahlili</li>
+                        <li>Ish oqimi avtomatsiyasi</li>
+                        <li>Xarajat qisqartirish</li>
+                        <li>Samaradorlik yaxshilash</li>
+                        <li>Metrika rivojlantirish</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Kontakt Ma'lumotlari</h2>
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <h4>📞 Telefon</h4>
+                    <a href="tel:+99890766442">+998 90 766 44 28</a>
+                </div>
+                <div class="contact-item">
+                    <h4>✉️ Email</h4>
+                    <a href="mailto:Iqboljona.22@gmail.com">Iqboljona.22@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <h4>🔗 LinkedIn</h4>
+                    <a href="https://www.linkedin.com/in/iqboljon574425127/" target="_blank">Profilimni Ko'ring</a>
+                </div>
+                <div class="contact-item">
+                    <h4>📍 Joylashgan</h4>
+                    <p style="color: #666; font-size: 14px;">Toshkent, O'zbekiston</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <h3>IQBOLJON ABDULAZIZOV</h3>
+            <div class="contact-footer">
+                <a href="tel:+99890766442">📞 +998 90 766 44 28</a>
+                <a href="mailto:Iqboljona.22@gmail.com">✉️ Email</a>
+                <a href="https://www.linkedin.com/in/iqboljon574425127/" target="_blank">🔗 LinkedIn</a>
+            </div>
+            <div class="copyright">
+                <p>Maslahatlar va loyiha muhokamasi uchun tayyor</p>
+                <p>&copy; 2024 Iqboljon Abdulazizov. Barcha huquqlar himoyalangan.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
